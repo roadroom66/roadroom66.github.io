@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9uu.cm有你有我-社区交流与实用信息分享平台</title>
+<meta name="description" content="9uu.cm有你有我是一个面向中文用户的社区交流与实用信息分享平台，提供版块导航、热门话题、参与指南、社区规范与常见问题说明，帮助新老用户快速了解并融入社区。">
+<meta name="keywords" content="9uu.cm有你有我,社区交流,话题讨论,参与指南,社区规范,信息分享">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --ink:#1c2230;
+    --ink-soft:#4a5568;
+    --line:#e3e7ef;
+    --bg:#f6f8fc;
+    --card:#ffffff;
+    --brand:#2f6bff;
+    --brand-deep:#1f4fd0;
+    --accent:#ff7a45;
+    --accent-soft:#fff1ea;
+    --radius:14px;
+    --shadow:0 6px 24px rgba(24,40,90,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- 顶部栏 ---------- */
+  .topbar{
+    background:#101728;
+    color:#c8d2e6;
+    font-size:13px;
+  }
+  .topbar .wrap{
+    display:flex;flex-wrap:wrap;gap:8px 20px;
+    justify-content:space-between;align-items:center;
+    min-height:40px;
+  }
+  .topbar .notice{color:#8fa2c4;}
+  .topbar .links{display:flex;gap:18px;flex-wrap:wrap;}
+  .topbar .links a:hover{color:#fff;}
+
+  /* ---------- 页眉 ---------- */
+  header.site-head{
+    background:linear-gradient(135deg,#2f6bff 0%,#1f4fd0 58%,#17389c 100%);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  header.site-head::after{
+    content:"";
+    position:absolute;right:-120px;top:-120px;
+    width:380px;height:380px;border-radius:50%;
+    background:rgba(255,255,255,.08);
+  }
+  .head-inner{
+    position:relative;z-index:2;
+    display:flex;flex-wrap:wrap;gap:18px;
+    align-items:center;justify-content:space-between;
+    padding:22px 0;
+  }
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo-mark{
+    width:46px;height:46px;border-radius:13px;
+    background:#fff;color:var(--brand-deep);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:19px;letter-spacing:-1px;
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+    flex:0 0 auto;
+  }
+  .logo-text strong{display:block;font-size:19px;letter-spacing:.5px;}
+  .logo-text span{display:block;font-size:12.5px;color:rgba(255,255,255,.78);}
+  .head-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:10px 22px;border-radius:999px;
+    font-size:14.5px;font-weight:600;border:1px solid transparent;
+    transition:.2s;cursor:pointer;
+  }
+  .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff;}
+  .btn-ghost:hover{background:rgba(255,255,255,.15);}
+  .btn-solid{background:#fff;color:var(--brand-deep);}
+  .btn-solid:hover{background:#eaf0ff;}
+
+  /* ---------- 导航 ---------- */
+  nav.mainnav{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:50;
+    box-shadow:0 2px 10px rgba(24,40,90,.04);
+  }
+  nav.mainnav ul{
+    display:flex;flex-wrap:wrap;gap:4px;
+    list-style:none;padding:0;
+  }
+  nav.mainnav a{
+    display:block;padding:15px 16px;font-size:15px;
+    color:var(--ink-soft);font-weight:500;
+    border-bottom:3px solid transparent;transition:.2s;
+  }
+  nav.mainnav a:hover{color:var(--brand);border-bottom-color:var(--brand);}
+
+  /* ---------- 首屏 ---------- */
+  .hero{padding:44px 0 8px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.55fr 1fr;gap:26px;
+  }
+  .hero-main{
+    background:var(--card);border-radius:var(--radius);
+    padding:34px 32px;box-shadow:var(--shadow);
+    border:1px solid var(--line);
+  }
+  .tag{
+    display:inline-block;background:var(--accent-soft);color:#c2410c;
+    font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;
+    letter-spacing:.4px;margin-bottom:16px;
+  }
+  .hero-main h1{
+    font-size:31px;line-height:1.35;letter-spacing:-.3px;
+    margin-bottom:16px;color:#141a28;
+  }
+  .hero-main h1 em{
+    font-style:normal;color:var(--brand);
+    background:linear-gradient(180deg,transparent 64%,#dbe6ff 64%);
+    padding:0 2px;
+  }
+  .hero-main p{color:var(--ink-soft);font-size:15.5px;margin-bottom:14px;}
+  .hero-points{
+    list-style:none;display:grid;grid-template-columns:repeat(2,1fr);
+    gap:10px 18px;margin:20px 0 6px;
+  }
+  .hero-points li{
+    font-size:14.5px;color:#2b3448;
+    padding-left:24px;position:relative;
+  }
+  .hero-points li::before{
+    content:"";position:absolute;left:0;top:8px;
+    width:11px;height:11px;border-radius:50%;
+    background:var(--brand);opacity:.85;
+    box-shadow:0 0 0 4px #e7eeff;
+  }
+  .hero-side{display:flex;flex-direction:column;gap:20px;}
+  .side-card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px 22px 20px;
+    box-shadow:var(--shadow);
+  }
+  .side-card h3{
+    font-size:16px;margin-bottom:14px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .side-card h3::before{
+    content:"";width:4px;height:16px;border-radius:2px;
+    background:var(--brand);
+  }
+  .rank-list{list-style:none;counter-reset:rk;}
+  .rank-list li{
+    counter-increment:rk;
+    display:flex;gap:12px;align-items:flex-start;
+    padding:9px 0;border-bottom:1px dashed var(--line);
+    font-size:14.5px;
+  }
+  .rank-list li:last-child{border-bottom:0;padding-bottom:0;}
+  .rank-list li::before{
+    content:counter(rk);
+    flex:0 0 22px;height:22px;border-radius:7px;
+    background:#eef3ff;color:var(--brand-deep);
+    font-size:12.5px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+    margin-top:2px;
+  }
+  .rank-list li:nth-child(1)::before{background:var(--brand);color:#fff;}
+  .rank-list li:nth-child(2)::before{background:#7ba3ff;color:#fff;}
+  .rank-list li:nth-child(3)::before{background:#b9cdff;color:#1f3a86;}
+  .rank-list a:hover{color:var(--brand);}
+  .quick-tags{display:flex;flex-wrap:wrap;gap:9px;}
+  .quick-tags span{
+    font-size:13.5px;padding:6px 13px;border-radius:999px;
+    background:#f2f5fb;color:#3c4a63;border:1px solid #e6ebf5;
+    transition:.2s;cursor:default;
+  }
+  .quick-tags span:hover{background:#e7eeff;color:var(--brand-deep);border-color:#cfdcff;}
+
+  /* ---------- 通用区块 ---------- */
+  section.block{padding:44px 0 0;}
+  .block-head{
+    display:flex;flex-wrap:wrap;gap:10px 20px;
+    align-items:flex-end;justify-content:space-between;
+    margin-bottom:22px;
+  }
+  .block-head h2{
+    font-size:23px;letter-spacing:-.2px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .block-head h2::before{
+    content:"";width:5px;height:22px;border-radius:3px;
+    background:linear-gradient(180deg,var(--brand),#7ba3ff);
+  }
+  .block-head p{font-size:14px;color:#7b879e;}
+  .block-head .more{font-size:14px;color:var(--brand);font-weight:600;}
+  .block-head .more:hover{text-decoration:underline;}
+
+  /* ---------- 版块导航 ---------- */
+  .board-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  }
+  .board{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:20px 20px 18px;
+    box-shadow:var(--shadow);transition:.22s;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .board:hover{transform:translateY(-3px);border-color:#c9d8ff;box-shadow:0 12px 28px rgba(24,40,90,.12);}
+  .board .ico{
+    width:38px;height:38px;border-radius:11px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:17px;font-weight:700;color:#fff;
+  }
+  .board h3{font-size:16.5px;}
+  .board p{font-size:13.8px;color:var(--ink-soft);flex:1;}
+  .board .meta{
+    font-size:12.5px;color:#93a0b8;
+    border-top:1px dashed var(--line);padding-top:10px;
+  }
+  .c1{background:linear-gradient(135deg,#2f6bff,#5b8bff);}
+  .c2{background:linear-gradient(135deg,#ff7a45,#ff9f6e);}
+  .c3{background:linear-gradient(135deg,#12b886,#4ad4a6);}
+  .c4{background:linear-gradient(135deg,#7c5cff,#a48bff);}
+  .c5{background:linear-gradient(135deg,#f06595,#ff8fb3);}
+  .c6{background:linear-gradient(135deg,#0ea5e9,#57c4f5);}
+  .c7{background:linear-gradient(135deg,#f59f00,#ffc247);}
+  .c8{background:linear-gradient(135deg,#495057,#7b8794);}
+
+  /* ---------- 话题列表 ---------- */
+  .topic-wrap{
+    display:grid;grid-template-columns:1.6fr 1fr;gap:26px;
+    align-items:start;
+  }
+  .topic-list{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .topic{
+    display:flex;gap:16px;padding:18px 22px;
+    border-bottom:1px solid var(--line);transition:.18s;
+  }
+  .topic:last-child{border-bottom:0;}
+  .topic:hover{background:#f9fbff;}
+  .topic .avatar{
+    flex:0 0 42px;height:42px;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:15px;font-weight:700;color:#fff;
+  }
+  .topic-body{flex:1;min-width:0;}
+  .topic-body h3{font-size:15.8px;margin-bottom:5px;}
+  .topic-body h3 a:hover{color:var(--brand);}
+  .topic-body p{font-size:13.8px;color:var(--ink-soft);margin-bottom:8px;}
+  .topic-foot{
+    display:flex;flex-wrap:wrap;gap:8px 16px;
+    font-size:12.5px;color:#93a0b8;
+  }
+  .topic-foot .pill{
+    background:#f2f5fb;border-radius:999px;padding:2px 10px;color:#5b6b88;
+  }
+  .aside-stack{display:flex;flex-direction:column;gap:20px;}
+  .steps{list-style:none;counter-reset:st;}
+  .steps li{
+    counter-increment:st;position:relative;
+    padding:0 0 16px 40px;font-size:14.3px;color:#33405a;
+  }
+  .steps li:last-child{padding-bottom:0;}
+  .steps li::before{
+    content:counter(st);
+    position:absolute;left:0;top:1px;
+    width:26px;height:26px;border-radius:9px;
+    background:#eef3ff;color:var(--brand-deep);
+    font-size:13px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .steps li::after{
+    content:"";position:absolute;left:13px;top:29px;bottom:2px;
+    width:1px;background:var(--line);
+  }
+  .steps li:last-child::after{display:none;}
+  .steps li strong{display:block;font-size:14.6px;color:#141a28;margin-bottom:2px;}
+  .steps li span{color:var(--ink-soft);font-size:13.6px;}
+
+  /* ---------- 规范 ---------- */
+  .rules{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  }
+  .rule{
+    background:var(--card);border:1px solid var(--line);
+    border-left:4px solid var(--brand);
+    border-radius:12px;padding:20px 20px 18px;
+    box-shadow:var(--shadow);
+  }
+  .rule.warn{border-left-color:var(--accent);}
+  .rule.ok{border-left-color:#12b886;}
+  .rule h3{font-size:15.8px;margin-bottom:9px;}
+  .rule p{font-size:13.9px;color:var(--ink-soft);}
+
+  /* ---------- FAQ ---------- */
+  .faq{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  details.q{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:16px 20px;
+    box-shadow:var(--shadow);transition:.2s;
+  }
+  details.q[open]{border-color:#c9d8ff;background:#fbfcff;}
+  details.q summary{
+    cursor:pointer;font-size:15.3px;font-weight:600;
+    list-style:none;display:flex;justify-content:space-between;
+    gap:14px;align-items:flex-start;color:#141a28;
+  }
+  details.q summary::-webkit-details-marker{display:none;}
+  details.q summary::after{
+    content:"+";flex:0 0 auto;color:var(--brand);
+    font-size:19px;font-weight:700;line-height:1;
+    transition:.2s;
+  }
+  details.q[open] summary::after{content:"–";}
+  details.q p{
+    font-size:14px;color:var(--ink-soft);
+    margin-top:11px;padding-top:11px;border-top:1px dashed var(--line);
+  }
+
+  /* ---------- 底部提示条 ---------- */
+  .cta{
+    margin-top:48px;
+    background:linear-gradient(135deg,#1c2a52,#2f6bff);
+    border-radius:var(--radius);color:#fff;
+    padding:34px 32px;
+    display:flex;flex-wrap:wrap;gap:20px;
+    align-items:center;justify-content:space-between;
+    box-shadow:0 14px 34px rgba(31,79,208,.24);
+  }
+  .cta h2{font-size:21px;margin-bottom:7px;}
+  .cta p{font-size:14.3px;color:rgba(255,255,255,.82);max-width:620px;}
+
+  /* ---------- 页脚 ---------- */
+  footer.site-foot{
+    margin-top:52px;background:#101728;color:#93a2bd;
+    padding:40px 0 24px;font-size:13.8px;
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:26px;
+    padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.09);
+  }
+  .foot-grid h4{color:#fff;font-size:14.8px;margin-bottom:13px;}
+  .foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+  .foot-grid a:hover{color:#fff;}
+  .foot-brand p{font-size:13.5px;line-height:1.8;color:#8394b3;max-width:330px;}
+  .foot-brand .logo-text strong{color:#fff;font-size:17px;}
+  .foot-brand .logo-text span{color:#8394b3;}
+  .foot-brand .logo{margin-bottom:14px;}
+  .foot-brand .logo-mark{width:40px;height:40px;font-size:16px;border-radius:11px;}
+  .foot-bottom{
+    padding-top:18px;display:flex;flex-wrap:wrap;gap:10px 20px;
+    justify-content:space-between;font-size:12.8px;color:#6d7d9b;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:1024px){
+    .hero-grid{grid-template-columns:1fr;}
+    .board-grid{grid-template-columns:repeat(2,1fr);}
+    .topic-wrap{grid-template-columns:1fr;}
+    .rules{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    body{font-size:15.4px;}
+    .hero{padding:30px 0 4px;}
+    .hero-main{padding:26px 20px;}
+    .hero-main h1{font-size:24px;}
+    .hero-points{grid-template-columns:1fr;}
+    .board-grid{grid-template-columns:1fr;}
+    .faq{grid-template-columns:1fr;}
+    .rules{grid-template-columns:1fr;}
+    .cta{padding:26px 22px;}
+    .cta h2{font-size:18.5px;}
+    nav.mainnav a{padding:12px 12px;font-size:14.4px;}
+    .block-head h2{font-size:20px;}
+    .foot-grid{grid-template-columns:1fr;gap:22px;}
+    .topic{padding:16px 16px;gap:12px;}
+    .topic .avatar{flex:0 0 36px;height:36px;font-size:13.5px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="notice">社区倡导理性交流、友善发言，请先阅读版块规范再参与讨论</span>
+    <div class="links">
+      <a href="#guide">新手指南</a>
+      <a href="#rules">社区规范</a>
+      <a href="#faq">常见问题</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <div class="logo">
+      <div class="logo-mark">9uu</div>
+      <div class="logo-text">
+        <strong>9uu.cm 有你有我</strong>
+        <span>社区交流 · 话题分享 · 实用信息</span>
+      </div>
+    </div>
+    <div class="head-actions">
+      <a class="btn btn-ghost" href="#boards">浏览版块</a>
+      <a class="btn btn-solid" href="#guide">参与指南</a>
+    </div>
+  </div>
+</header>
+
+<nav class="mainnav">
+  <div class="wrap">
+    <ul>
+      <li><a href="#intro">社区首页</a></li>
+      <li><a href="#boards">版块导航</a></li>
+      <li><a href="#topics">热门话题</a></li>
+      <li><a href="#guide">参与指南</a></li>
+      <li><a href="#rules">社区规范</a></li>
+      <li><a href="#faq">常见问题</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero" id="intro">
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <span class="tag">有你有我 · 一起参与</span>
+        <h1>9uu.cm有你有我：一个让交流更顺畅的<em>中文社区入口</em></h1>
+        <p>“9uu.cm有你有我”这个名字本身就带着社区的温度——它强调的不是单向浏览，而是你和我共同参与、共同维护的交流空间。无论你是第一次来到这里，还是想重新熟悉版块结构，都可以从下面这份说明开始。</p>
+        <p>本页把社区里最常被问到的事情集中整理出来：有哪些版块、话题怎么参与、发言需要注意什么、遇到问题去哪里找答案。读完这一页，你基本就能顺畅地开始使用。</p>
+        <ul class="hero-points">
+          <li>按兴趣划分的版块导航，快速定位内容</li>
+          <li>热门话题一览，了解大家在聊什么</li>
+          <li>从注册到发言的完整参与流程说明</li>
+          <li>社区规范与友善交流的基本原则</li>
+        </ul>
+      </div>
+
+      <aside class="hero-side">
+        <div class="side-card">
+          <h3>热门话题方向</h3>
+          <ol class="rank-list">
+            <li><a href="#topics">新人报到与自我介绍</a></li>
+            <li><a href="#topics">日常经验与生活分享</a></li>
+            <li><a href="#topics">兴趣爱好交流讨论</a></li>
+            <li><a href="#topics">实用技巧与资源整理</a></li>
+            <li><a href="#topics">社区建议与反馈</a></li>
+          </ol>
+        </div>
+        <div class="side-card">
+          <h3>常用入口</h3>
+          <div class="quick-tags">
+            <span>版块列表</span>
+            <span>发帖规范</span>
+            <span>账号安全</span>
+            <span>举报与申诉</span>
+            <span>隐私说明</span>
+            <span>意见反馈</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 版块导航 -->
+  <section class="block" id="boards">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>版块导航</h2>
+        <p>按内容类型划分，先选版块再参与，讨论会更聚焦</p>
+      </div>
+      <div class="board-grid">
+        <article class="board">
+          <div class="ico c1">新</div>
+          <h3>新人报到</h3>
+          <p>第一次来到社区，可以在这里做简单介绍，说明自己感兴趣的方向，方便其他成员回应你。</p>
+          <div class="meta">适合：初次访问 · 自我介绍</div>
+        </article>
+        <article class="board">
+          <div class="ico c2">聊</div>
+          <h3>综合闲聊</h3>
+          <p>没有固定主题的日常交流区，聊聊最近发生的事、看到的内容，氛围相对轻松。</p>
+          <div class="meta">适合：日常交流 · 轻松话题</div>
+        </article>
+        <article class="board">
+          <div class="ico c3">技</div>
+          <h3>经验技巧</h3>
+          <p>分享实用方法、操作步骤和踩坑记录，鼓励把过程写清楚，方便他人参考。</p>
+          <div class="meta">适合：教程 · 经验总结</div>
+        </article>
+        <article class="board">
+          <div class="ico c4">趣</div>
+          <h3>兴趣交流</h3>
+          <p>围绕具体爱好展开讨论，例如阅读、影音、手工、运动等，找到同好一起聊。</p>
+          <div class="meta">适合：同好聚集 · 深度讨论</div>
+        </article>
+        <article class="board">
+          <div class="ico c5">问</div>
+          <h3>提问求助</h3>
+          <p>遇到不清楚的问题可以在这里发帖，建议把背景、已尝试的方法一并写出来。</p>
+          <div class="meta">适合：求助 · 答疑</div>
+        </article>
+        <article class="board">
+          <div class="ico c6">荐</div>
+          <h3>内容推荐</h3>
+          <p>推荐你认为值得一看的内容，附上简短理由，比只发一个链接更有参考价值。</p>
+          <div class="meta">适合：分享 · 推荐</div>
+        </article>
+        <article class="board">
+          <div class="ico c7">议</div>
+          <h3>社区建议</h3>
+          <p>对版块设置、使用体验有想法，可以在这里提出，社区会集中整理可改进的部分。</p>
+          <div class="meta">适合：建议 · 反馈</div>
+        </article>
+        <article class="board">
+          <div class="ico c8">规</div>
+          <h3>规则公告</h3>
+          <p>社区规范、调整说明和重要提示集中发布在这里，参与讨论前建议先浏览一遍。</p>
+          <div class="meta">适合：必读 · 公告</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门话题 + 参与指南 -->
+  <section class="block" id="topics">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>近期话题与参与指南</h2>
+        <p>看看大家在关注什么，也了解一次完整参与是怎么完成的</p>
+      </div>
+      <div class="topic-wrap">
+        <div class="topic-list">
+          <article class="topic">
+            <div class="avatar c1">报</div>
+            <div class="topic-body">
+              <h3><a href="#topics">新人报到帖怎么写才容易被回应</a></h3>
+              <p>与其只写一句“大家好”，不如说清楚自己感兴趣的方向和想找什么样的交流，别人更容易接话。</p>
+              <div class="topic-foot">
+                <span class="pill">新人报到</span>
+                <span>参与门槛：低</span>
+                <span>建议附上兴趣标签</span>
+              </div>
+            </div>
+          </article>
+          <article class="topic">
+            <div class="avatar c3">技</div>
+            <div class="topic-body">
+              <h3><a href="#topics">把一次操作过程完整记录下来的写法</a></h3>
+              <p>经验类内容最怕只给结论。把前提条件、操作顺序和遇到的问题写清楚，别人照着做才不会卡住。</p>
+              <div class="topic-foot">
+                <span class="pill">经验技巧</span>
+                <span>建议配步骤说明</span>
+                <span>注明适用环境</span>
+              </div>
+            </div>
+          </article>
+          <article class="topic">
+            <div class="avatar c5">问</div>
+            <div class="topic-body">
+              <h3><a href="#topics">提问时怎样描述问题，回复率更高</a></h3>
+              <p>说明你做了什么、期望的结果是什么、实际出现了什么，这三点写全，基本就能让其他人快速理解。</p>
+              <div class="topic-foot">
+                <span class="pill">提问求助</span>
+                <span>避免只发一句话</span>
+                <span>可补充截图说明</span>
+              </div>
+            </div>
+          </article>
+          <article class="topic">
+            <div class="avatar c4">趣</div>
+            <div class="topic-body">
+              <h3><a href="#topics">兴趣类讨论如何保持长期活跃</a></h3>
+              <p>固定主题、定期更新、认真回复，是让一个兴趣帖持续有内容的三件事，比一次性发很多更有效。</p>
+              <div class="topic-foot">
+                <span class="pill">兴趣交流</span>
+                <span>鼓励长期更新</span>
+                <span>尊重不同观点</span>
+              </div>
+            </div>
+          </article>
+          <article class="topic">
+            <div class="avatar c7">议</div>
+            <div class="topic-body">
+              <h3><a href="#topics">对版块划分有建议，应该怎么提</a></h3>
+              <p>说明现状、你遇到的问题以及期望的调整方式，具体的建议比笼统的“希望改进”更容易被采纳。</p>
+              <div class="topic-foot">
+                <span class="pill">社区建议</span>
+                <span>描述具体场景</span>
+                <span>可附替代方案</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="aside-stack" id="guide">
+          <div class="side-card">
+            <h3>一次完整参与的流程</h3>
+            <ol class="steps">
+              <li>
+                <strong>先浏览，再发言</strong>
+                <span>花几分钟看看版块里的既有内容，了解讨论风格和常见话题范围。</span>
+              </li>
+              <li>
+                <strong>选择匹配的版块</strong>
+                <span>内容发在对的版块，被看到和被回复的概率会明显提高。</span>
+              </li>
+              <li>
+                <strong>把标题写具体</strong>
+                <span>标题能概括内容要点即可，避免夸张表达和与正文无关的词汇。</span>
+              </li>
+              <li>
+                <strong>正文交代清楚背景</strong>
+                <span>时间、场景、已尝试的做法，这些信息能减少来回追问。</span>
+              </li>
+              <li>
+                <strong>跟进回复并补充</strong>
+                <span>有人回应后及时补充信息或反馈结果，讨论才有完整闭环。</span>
+              </li>
+            </ol>
+          </div>
+          <div class="side-card">
+            <h3>参与前的三点提醒</h3>
+            <p style="font-size:14px;color:#4a5568;">一，先确认内容是否适合公开发布；二，涉及他人信息时注意保护隐私；三，遇到分歧时对事不对人。做到这三点，绝大多数交流都会比较顺畅。</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 社区规范 -->
+  <section class="block" id="rules">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>社区规范与交流原则</h2>
+        <p>规范的目的不是限制表达，而是让讨论能持续进行下去</p>
+      </div>
+      <div class="rules">
+        <article class="rule ok">
+          <h3>鼓励这样做</h3>
+          <p>发言前先读版块说明；回复时针对内容本身；分享经验时写清前提条件；引用他人内容时注明来源；对不确定的信息保持谨慎表述。</p>
+        </article>
+        <article class="rule">
+          <h3>发帖的基本要求</h3>
+          <p>标题与内容相符，正文有一定信息量，不重复发布相同内容，不把无关话题发到不匹配的版块，避免只发链接而不作任何说明。</p>
+        </article>
+        <article class="rule warn">
+          <h3>不建议出现的行为</h3>
+          <p>人身攻击、地域或群体歧视、恶意刷屏、发布未经核实的传言、公开他人隐私信息、以任何形式诱导他人点击不明链接。</p>
+        </article>
+        <article class="rule">
+          <h3>关于隐私保护</h3>
+          <p>不要在公开版块留下真实姓名、证件号码、联系方式、住址等个人敏感信息。如发现他人信息被公开，可向管理方反馈处理。</p>
+        </article>
+        <article class="rule">
+          <h3>关于内容版权</h3>
+          <p>转载他人作品前请确认授权情况，并注明原作者与出处。对于来源不明的素材，建议只做简要引用和讨论，不直接整篇搬运。</p>
+        </article>
+        <article class="rule ok">
+          <h3>遇到问题怎么办</h3>
+          <p>内容被误删、账号异常、遭遇骚扰等情况，可通过反馈渠道说明情况并附上必要信息，处理过程通常需要一定时间，请耐心等待。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>常见问题</h2>
+        <p>整理自社区里被反复提到的问题</p>
+      </div>
+      <div class="faq">
+        <details class="q" open>
+          <summary>第一次来，应该先做什么？</summary>
+          <p>建议先浏览版块导航，找到自己感兴趣的两三个版块，看看里面的讨论风格和内容范围，再决定从哪里开始参与。先看后发，通常体验会更好。</p>
+        </details>
+        <details class="q">
+          <summary>发帖一定要写很长吗？</summary>
+          <p>不一定。长短取决于内容本身。如果是一个简单的提问，把背景和问题说清楚就够了；如果是经验分享，步骤和注意事项写全会更有参考价值。</p>
+        </details>
+        <details class="q">
+          <summary>为什么我的帖子没有得到回复？</summary>
+          <p>常见原因有几种：标题过于笼统、正文信息不足、发在了不匹配的版块，或者话题本身参与人数较少。可以尝试补充细节或调整版块后重新发布。</p>
+        </details>
+        <details class="q">
+          <summary>可以发布带链接的内容吗？</summary>
+          <p>建议在确有需要时使用，并说明链接指向的内容与用途。只发链接、不作任何说明的帖子，通常很难获得回应，也容易被判定为无效内容。</p>
+        </details>
+        <details class="q">
+          <summary>和别人观点不一致怎么办？</summary>
+          <p>观点不同是正常现象。可以就事论事地说明自己的理由，也可以选择不继续讨论。针对人而不是针对观点的表达，通常会让交流迅速失去意义。</p>
+        </details>
+        <details class="q">
+          <summary>如何保护自己的账号和信息？</summary>
+          <p>使用独立的密码，不把账号信息告知他人，不在公开版块留下可定位到个人的信息。如果发现账号出现异常，应尽快通过反馈渠道说明情况。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部提示 -->
+  <section class="block">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>“有你有我”，从一次认真的发言开始</h2>
+          <p>社区的内容由每一位参与者共同构成。选对版块、写清内容、友善回应，这三件小事做好了，交流的质量就会不一样。</p>
+        </div>
+        <a class="btn btn-solid" href="#boards">前往版块导航</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo">
+          <div class="logo-mark">9uu</div>
+          <div class="logo-text">
+            <strong>9uu.cm 有你有我</strong>
+            <span>社区交流与实用信息分享</span>
+          </div>
+        </div>
+        <p>本页为社区首页信息说明，用于帮助访问者了解版块结构、参与方式与交流规范。具体功能与内容以实际页面为准。</p>
+      </div>
+      <div>
+        <h4>版块</h4>
+        <ul>
+          <li><a href="#boards">新人报到</a></li>
+          <li><a href="#boards">综合闲聊</a></li>
+          <li><a href="#boards">经验技巧</a></li>
+          <li><a href="#boards">兴趣交流</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>帮助</h4>
+        <ul>
+          <li><a href="#guide">参与指南</a></li>
+          <li><a href="#rules">社区规范</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#topics">话题浏览</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>说明</h4>
+        <ul>
+          <li><a href="#rules">隐私保护</a></li>
+          <li><a href="#rules">内容版权</a></li>
+          <li><a href="#rules">反馈渠道</a></li>
+          <li><a href="#intro">关于社区</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>9uu.cm 有你有我 · 社区交流与实用信息分享</span>
+      <span>请遵守社区规范，理性表达，友善交流</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 平滑滚动：为导航锚点增加偏移处理，避免被吸顶导航遮挡
+  (function () {
+    var nav = document.querySelector('nav.mainnav');
+    function offset() {
+      return nav ? nav.offsetHeight + 10 : 10;
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var id = link.getAttribute('href');
+        if (!id || id === '#') return;
+        var target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.pageYOffset - offset();
+        window.scrollTo({ top: top < 0 ? 0 : top, behavior: 'smooth' });
+      });
+    });
+  })();
+
+  // FAQ：同一时间只展开一个，减少页面跳动
+  (function () {
+    var items = document.querySelectorAll('details.q');
+    items.forEach(function (item) {
+      item.addEventListener('toggle', function () {
+        if (!item.open) return;
+        items.forEach(function (other) {
+          if (other !== item) other.open = false;
+        });
+      });
+    });
+  })();
+</script>
+
+</body>
+  </html>
