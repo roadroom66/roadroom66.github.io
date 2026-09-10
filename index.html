@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>虐带美女-漫画题材解析、作品类型与阅读导航</title>
+<meta name="description" content="虐带美女题材漫画的阅读导航与内容解析，梳理虐带美女的含义、常见剧情走向、人物设定、类型分支、阅读顺序与选作品建议，帮助读者快速了解这一类作品的看点与注意事项。">
+<meta name="keywords" content="虐带美女,虐带美女漫画,虐恋题材,美女角色设定,漫画阅读导航,剧情类型解析">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#1c1420;
+  --ink-soft:#4a3a52;
+  --muted:#7c6b86;
+  --rose:#b6205a;
+  --rose-deep:#7d1039;
+  --rose-soft:#fdeef4;
+  --plum:#3a1f45;
+  --line:#eadfe8;
+  --bg:#fbf7fa;
+  --card:#ffffff;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(80,20,55,.08);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;}
+.wrap{
+  width:100%;
+  max-width:1160px;
+  margin:0 auto;
+  padding:0 20px;
+}
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  height:66px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  font-size:19px;
+  letter-spacing:.5px;
+  color:var(--plum);
+  white-space:nowrap;
+}
+.brand .dot{
+  width:12px;height:12px;border-radius:50%;
+  background:linear-gradient(135deg,var(--rose),#e2699a);
+  box-shadow:0 0 0 4px rgba(182,32,90,.12);
+}
+.brand small{
+  display:block;
+  font-size:11px;
+  font-weight:500;
+  color:var(--muted);
+  letter-spacing:2px;
+}
+.main-nav{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.main-nav a{
+  font-size:14.5px;
+  padding:8px 13px;
+  border-radius:999px;
+  color:var(--ink-soft);
+  transition:.2s;
+}
+.main-nav a:hover{
+  background:var(--rose-soft);
+  color:var(--rose-deep);
+}
+.header-tag{
+  font-size:12px;
+  color:var(--rose-deep);
+  background:var(--rose-soft);
+  border:1px solid #f6d5e3;
+  padding:5px 11px;
+  border-radius:999px;
+  white-space:nowrap;
+}
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(900px 320px at 88% -10%, rgba(226,105,154,.28), transparent 62%),
+    linear-gradient(160deg,#2b1230 0%,#4a1a3c 55%,#6d1c46 100%);
+  color:#fff;
+  padding:56px 0 62px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  right:-120px;bottom:-160px;
+  width:420px;height:420px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.16), transparent 65%);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.35fr .95fr;
+  gap:40px;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+.hero h1{
+  font-size:34px;
+  line-height:1.35;
+  margin:0 0 16px;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:#ffc4dc;
+}
+.hero p.lead{
+  margin:0 0 22px;
+  color:#f0d9e6;
+  font-size:16px;
+  max-width:600px;
+}
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-block;
+  padding:11px 22px;
+  border-radius:999px;
+  font-size:15px;
+  font-weight:600;
+  transition:.22s;
+  border:1px solid transparent;
+  cursor:pointer;
+}
+.btn-primary{
+  background:linear-gradient(135deg,#e2699a,#b6205a);
+  color:#fff;
+  box-shadow:0 8px 22px rgba(182,32,90,.35);
+}
+.btn-primary:hover{transform:translateY(-2px);}
+.btn-ghost{
+  border-color:rgba(255,255,255,.5);
+  color:#fff;
+}
+.btn-ghost:hover{background:rgba(255,255,255,.14);}
+.hero-panel{
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:var(--radius);
+  padding:22px 22px 18px;
+  backdrop-filter:blur(4px);
+}
+.hero-panel h2{
+  font-size:15px;
+  margin:0 0 14px;
+  letter-spacing:1px;
+  color:#ffd9e8;
+  font-weight:700;
+}
+.hero-panel ul{
+  margin:0;padding:0;list-style:none;
+}
+.hero-panel li{
+  font-size:14px;
+  color:#f2e2ec;
+  padding:8px 0 8px 16px;
+  position:relative;
+  border-bottom:1px dashed rgba(255,255,255,.16);
+}
+.hero-panel li:last-child{border-bottom:0;}
+.hero-panel li::before{
+  content:"";
+  position:absolute;left:0;top:17px;
+  width:6px;height:6px;border-radius:50%;
+  background:#ff9ac1;
+}
+/* ---------- section base ---------- */
+section{padding:52px 0;}
+.section-head{
+  margin-bottom:26px;
+}
+.section-head .kicker{
+  font-size:12.5px;
+  letter-spacing:3px;
+  color:var(--rose);
+  font-weight:700;
+  text-transform:uppercase;
+}
+.section-head h2{
+  font-size:25px;
+  margin:8px 0 8px;
+  color:var(--plum);
+  font-weight:800;
+}
+.section-head p{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+  max-width:760px;
+}
+/* ---------- intro ---------- */
+.intro-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr;
+  gap:34px;
+  align-items:start;
+}
+.prose p{
+  margin:0 0 16px;
+  color:#3d2f45;
+}
+.prose strong{color:var(--rose-deep);}
+.fact-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px 22px;
+  box-shadow:var(--shadow);
+}
+.fact-card h3{
+  margin:0 0 12px;
+  font-size:16px;
+  color:var(--plum);
+}
+.fact-card dl{
+  margin:0;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:8px 14px;
+  font-size:14px;
+}
+.fact-card dt{color:var(--muted);}
+.fact-card dd{margin:0;color:var(--ink-soft);}
+/* ---------- type cards ---------- */
+.type-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.type-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 20px;
+  box-shadow:var(--shadow);
+  transition:.22s;
+  display:flex;
+  flex-direction:column;
+}
+.type-card:hover{transform:translateY(-4px);border-color:#f0c6da;}
+.type-card .badge{
+  align-self:flex-start;
+  font-size:12px;
+  padding:3px 10px;
+  border-radius:999px;
+  background:var(--rose-soft);
+  color:var(--rose-deep);
+  font-weight:600;
+  margin-bottom:12px;
+}
+.type-card h3{
+  font-size:17px;
+  margin:0 0 10px;
+  color:var(--plum);
+}
+.type-card p{
+  margin:0 0 14px;
+  font-size:14.5px;
+  color:var(--ink-soft);
+  flex:1;
+}
+.type-card .meta{
+  font-size:13px;
+  color:var(--muted);
+  border-top:1px dashed var(--line);
+  padding-top:12px;
+}
+/* ---------- ranking ---------- */
+.rank-section{
+  background:linear-gradient(180deg,#fff,#fdf3f8);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.rank-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px 26px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  counter-reset:rk;
+}
+.rank-list li{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:14px 16px;
+}
+.rank-list li::before{
+  counter-increment:rk;
+  content:counter(rk,decimal-leading-zero);
+  font-weight:800;
+  font-size:15px;
+  color:#fff;
+  background:linear-gradient(135deg,#c93b70,#7d1039);
+  min-width:34px;
+  height:34px;
+  border-radius:9px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:none;
+}
+.rank-list .rk-body h4{
+  margin:0 0 4px;
+  font-size:15.5px;
+  color:var(--plum);
+}
+.rank-list .rk-body p{
+  margin:0;
+  font-size:13.5px;
+  color:var(--muted);
+}
+/* ---------- guide steps ---------- */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.step{
+  background:var(--card);
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  padding:20px;
+  position:relative;
+}
+.step .num{
+  font-size:13px;
+  font-weight:800;
+  color:var(--rose);
+  letter-spacing:1px;
+  margin-bottom:10px;
+  display:block;
+}
+.step h3{
+  margin:0 0 8px;
+  font-size:16px;
+  color:var(--plum);
+}
+.step p{
+  margin:0;
+  font-size:14px;
+  color:var(--ink-soft);
+}
+/* ---------- notes ---------- */
+.notes{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.note-box{
+  border-radius:var(--radius);
+  padding:22px 24px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+.note-box.warn{
+  background:#fff8f4;
+  border-color:#f5d9c8;
+}
+.note-box h3{
+  margin:0 0 12px;
+  font-size:16.5px;
+  color:var(--plum);
+}
+.note-box ul{
+  margin:0;
+  padding-left:18px;
+  font-size:14.5px;
+  color:var(--ink-soft);
+}
+.note-box li{margin-bottom:8px;}
+/* ---------- faq ---------- */
+.faq{
+  display:grid;
+  gap:12px;
+}
+.faq details{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:16px 20px;
+  transition:.2s;
+}
+.faq details[open]{
+  border-color:#eec3d8;
+  box-shadow:var(--shadow);
+}
+.faq summary{
+  cursor:pointer;
+  font-weight:700;
+  font-size:15.5px;
+  color:var(--plum);
+  list-style:none;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"+";
+  font-size:19px;
+  color:var(--rose);
+  font-weight:600;
+  line-height:1;
+}
+.faq details[open] summary::after{content:"–";}
+.faq p{
+  margin:12px 0 0;
+  font-size:14.5px;
+  color:var(--ink-soft);
+}
+/* ---------- footer ---------- */
+.site-footer{
+  background:#241028;
+  color:#cbb6c6;
+  padding:42px 0 26px;
+  font-size:14px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr;
+  gap:30px;
+  padding-bottom:26px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.site-footer h4{
+  color:#fff;
+  font-size:15px;
+  margin:0 0 12px;
+}
+.site-footer p{margin:0 0 10px;line-height:1.8;}
+.site-footer ul{
+  list-style:none;
+  margin:0;padding:0;
+}
+.site-footer li{margin-bottom:8px;}
+.site-footer a:hover{color:#ff9ac1;}
+.copyright{
+  padding-top:18px;
+  font-size:12.5px;
+  color:#9c8699;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px;
+}
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:28px;}
+  .hero h1{font-size:28px;}
+  .intro-grid{grid-template-columns:1fr;}
+  .type-grid{grid-template-columns:repeat(2,1fr);}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .rank-list{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  body{font-size:15.5px;}
+  .header-inner{height:auto;flex-wrap:wrap;padding:12px 0;gap:10px;}
+  .main-nav{order:3;width:100%;overflow-x:auto;padding-bottom:4px;}
+  .main-nav a{padding:7px 11px;font-size:14px;}
+  .header-tag{display:none;}
+  .hero{padding:40px 0 46px;}
+  .hero h1{font-size:24px;}
+  section{padding:38px 0;}
+  .section-head h2{font-size:21px;}
+  .type-grid{grid-template-columns:1fr;}
+  .steps{grid-template-columns:1fr;}
+  .notes{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .hero-actions .btn{flex:1;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="dot"></span>
+      <span>
+        虐带美女·题材导航
+        <small>COMIC THEME GUIDE</small>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#intro">题材释义</a>
+      <a href="#types">类型分支</a>
+      <a href="#ranking">人气看点</a>
+      <a href="#guide">阅读指南</a>
+      <a href="#notes">注意事项</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <span class="header-tag">剧情向 · 角色向</span>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>虐带美女题材：<em>看懂剧情张力与角色塑造</em>的阅读导航</h1>
+        <p class="lead">“虐带美女”通常指以情感冲突、命运波折为主线，同时以女性角色为核心展开叙事的漫画与图文作品。本页从题材含义、常见分支、人物设定到阅读顺序与选作品方法，做一次系统梳理，方便读者按自己的口味快速找到方向。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#types">查看类型分支</a>
+          <a class="btn btn-ghost" href="#guide">阅读入门指南</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="题材速览">
+        <h2>题材速览</h2>
+        <ul>
+          <li>核心情绪：压抑、拉扯、反转与释然</li>
+          <li>常见角色：隐忍型女主、强势型对手、立场摇摆的配角</li>
+          <li>叙事重点：人物动机是否立得住，转折是否有铺垫</li>
+          <li>阅读前提：先确认作品基调与自身接受度</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Definition</span>
+        <h2>“虐带美女”到底指什么</h2>
+        <p>这一类关键词并没有统一的官方定义，更多是读者在长期阅读中形成的一种口语化概括。理解它的构成，比记住一个标签更重要。</p>
+      </div>
+      <div class="intro-grid">
+        <div class="prose">
+          <p>从字面拆开看，<strong>“虐”</strong>指向情绪层面的沉重感——误会、牺牲、错过、被迫的选择，以及角色在困境中的挣扎；<strong>“带”</strong>可以理解为“带有、带有某种气质”，说明这不是纯粹的悲剧，而是带着特定氛围的叙事；<strong>“美女”</strong>则说明作品在角色设计上以女性形象为视觉与情感中心，外貌、气质、穿搭、神态往往是重要的表达手段。</p>
+          <p>因此，这类作品通常不是单纯追求“惨”，而是通过<strong>人物关系中的不对等、信息差与立场冲突</strong>，让读者产生代入与共情。好的作品会让压抑有出口、让转折有逻辑；处理得粗糙的作品则容易变成情绪堆叠，这也是读者评价分化明显的原因。</p>
+          <p>在阅读体验上，它更接近“情绪浓度较高的剧情向作品”。如果你习惯轻快日常向内容，可能需要先试读几话再决定是否继续；如果你偏好人物弧光明显、关系线复杂的叙事，这类题材往往能提供较强的阅读黏性。</p>
+        </div>
+        <aside class="fact-card">
+          <h3>阅读前可先确认的几点</h3>
+          <dl>
+            <dt>基调</dt><dd>偏压抑、偏治愈，还是先抑后扬</dd>
+            <dt>主线</dt><dd>情感关系为主，还是夹杂悬疑、成长、职场等</dd>
+            <dt>视角</dt><dd>以女性角色视角为主，还是多视角切换</dd>
+            <dt>篇幅</dt><dd>短篇完结更紧凑，长篇需留意节奏</dd>
+            <dt>画风</dt><dd>写实、唯美、简约，直接影响观感</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPES -->
+  <section id="types">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Categories</span>
+        <h2>常见的类型分支</h2>
+        <p>同样是“虐带美女”的标签，不同作品在题材融合上差异很大。下面按叙事重心划分几类常见方向，方便对照自己的偏好。</p>
+      </div>
+      <div class="type-grid">
+
+        <article class="type-card">
+          <span class="badge">情感向</span>
+          <h3>关系拉扯型</h3>
+          <p>以两人或多人的情感关系为核心，通过误会、立场差异、时间错位推动剧情。看点在于角色如何在一次次选择中暴露真实想法。</p>
+          <div class="meta">适合：喜欢细腻心理描写的读者</div>
+        </article>
+
+        <article class="type-card">
+          <span class="badge">成长向</span>
+          <h3>逆境蜕变型</h3>
+          <p>女性角色在压力与挫折中逐步建立自我，剧情重心从“承受”转向“改变”。情绪起伏之外，更强调人物能力与心态的成长。</p>
+          <div class="meta">适合：偏好励志与人物弧光的读者</div>
+        </article>
+
+        <article class="type-card">
+          <span class="badge">悬疑向</span>
+          <h3>谜题驱动型</h3>
+          <p>用身份谜团、事件真相或隐藏动机串联叙事，情绪张力来自信息逐步揭开的过程，读者会主动参与推理与猜测。</p>
+          <div class="meta">适合：喜欢边读边推敲的读者</div>
+        </article>
+
+        <article class="type-card">
+          <span class="badge">古风向</span>
+          <h3>权谋命运型</h3>
+          <p>背景设定在架空或古风环境，角色受制于家族、身份与权力格局。服饰、场景与礼仪细节往往是重要的氛围来源。</p>
+          <div class="meta">适合：喜欢世界观与美术设定的读者</div>
+        </article>
+
+        <article class="type-card">
+          <span class="badge">现代向</span>
+          <h3>都市现实型</h3>
+          <p>把冲突放在职场、家庭或城市生活中，情绪来源更贴近日常经验，代入感强，也更容易引发读者讨论与共鸣。</p>
+          <div class="meta">适合：偏爱现实题材的读者</div>
+        </article>
+
+        <article class="type-card">
+          <span class="badge">治愈向</span>
+          <h3>先抑后扬型</h3>
+          <p>前期铺垫沉重情绪，后期通过关系修复、误会解除或自我和解走向温暖收束，整体阅读体验更强调“熬过去”的释放感。</p>
+          <div class="meta">适合：需要情绪出口的读者</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RANKING / 看点 -->
+  <section id="ranking" class="rank-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Highlights</span>
+        <h2>挑选作品时可以关注的看点</h2>
+        <p>以下不是作品排名，而是读者在筛选这类题材时经常用来判断“值不值得追”的几个观察维度。</p>
+      </div>
+      <ol class="rank-list">
+        <li>
+          <div class="rk-body">
+            <h4>人物动机是否自洽</h4>
+            <p>角色做出让人揪心的选择时，是否给出了足够的心理铺垫与处境交代。</p>
+          </div>
+        </li>
+        <li>
+          <div class="rk-body">
+            <h4>情绪节奏是否可控</h4>
+            <p>压抑与缓和的交替是否有呼吸感，而不是长时间高强度堆叠。</p>
+          </div>
+        </li>
+        <li>
+          <div class="rk-body">
+            <h4>女性角色的立体度</h4>
+            <p>是否有独立目标与判断力，而不是仅作为推动剧情的工具存在。</p>
+          </div>
+        </li>
+        <li>
+          <div class="rk-body">
+            <h4>转折是否有伏笔</h4>
+            <p>关键反转是否提前埋线，避免突兀感影响整体观感。</p>
+          </div>
+        </li>
+        <li>
+          <div class="rk-body">
+            <h4>画风与题材的匹配度</h4>
+            <p>线条、配色与分镜是否服务于情绪表达，而不是与基调割裂。</p>
+          </div>
+        </li>
+        <li>
+          <div class="rk-body">
+            <h4>收束是否完整</h4>
+            <p>结局是否回应了前文的核心矛盾，读者能否获得情绪上的落点。</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Reading Guide</span>
+        <h2>四步建立自己的阅读顺序</h2>
+        <p>面对同类题材数量众多的情况，按下面的顺序筛选，通常能更快找到适合自己的作品。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="num">STEP 01</span>
+          <h3>先看简介与标签</h3>
+          <p>确认题材融合方向、基调与大致篇幅，排除明显不符合口味的类型。</p>
+        </div>
+        <div class="step">
+          <span class="num">STEP 02</span>
+          <h3>试读前三话</h3>
+          <p>观察画风、叙事节奏与角色出场方式，判断自己是否愿意继续投入时间。</p>
+        </div>
+        <div class="step">
+          <span class="num">STEP 03</span>
+          <h3>确认更新状态</h3>
+          <p>连载中的作品更适合追更，已完结的作品更适合一次性读完，按习惯选择。</p>
+        </div>
+        <div class="step">
+          <span class="num">STEP 04</span>
+          <h3>记录与整理</h3>
+          <p>把喜欢的作品按类型归档，方便后续按心情快速找到合适的阅读对象。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTES -->
+  <section id="notes">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Notes</span>
+        <h2>阅读与选择时的注意事项</h2>
+        <p>这类题材情绪浓度较高，合理安排阅读节奏，比一口气追完更重要。</p>
+      </div>
+      <div class="notes">
+        <div class="note-box warn">
+          <h3>关于情绪体验</h3>
+          <ul>
+            <li>如果连续阅读后感到明显低落，可以暂时切换到轻松向作品调节。</li>
+            <li>注意区分虚构剧情与现实关系，不要把作品中的处理方式直接套用到生活里。</li>
+            <li>遇到让自己不适的内容，及时停止阅读是合理选择，不必勉强追完。</li>
+          </ul>
+        </div>
+        <div class="note-box">
+          <h3>关于内容判断</h3>
+          <ul>
+            <li>不同平台的内容规范不同，阅读前可先了解所在平台的说明与提示。</li>
+            <li>对作品评价保持独立判断，热度与个人喜好并不总是一致。</li>
+            <li>涉及付费内容时，先确认章节范围与获取方式，再做决定。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">FAQ</span>
+        <h2>常见问题</h2>
+        <p>整理读者在接触这一题材时最常提出的疑问。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>“虐带美女”是正式的漫画分类吗？</summary>
+          <p>它更接近读者口口相传的描述性说法，而不是行业内的标准分类。不同平台的标签体系不同，实际检索时建议结合“剧情”“情感”“成长”等更通用的关键词一起使用。</p>
+        </details>
+        <details>
+          <summary>这类作品一定都是悲剧结局吗？</summary>
+          <p>不一定。部分作品前期情绪沉重，后期会走向和解或温暖收束；也有作品保持开放结局。判断结局倾向，可以参考简介、读者讨论或作品的整体基调描述。</p>
+        </details>
+        <details>
+          <summary>如何判断一部作品是否适合自己？</summary>
+          <p>最直接的方法是试读前几话，观察画风、叙事节奏与角色塑造是否符合偏好；同时留意简介中的题材说明，避免在不喜欢的方向上投入过多时间。</p>
+        </details>
+        <details>
+          <summary>女性角色在其中的塑造有什么值得关注的地方？</summary>
+          <p>可以重点看角色是否有独立目标、是否具备判断与行动能力，以及她在剧情推进中是被动承受还是主动改变。这些往往决定作品是停留在情绪消费，还是具备更完整的人物弧光。</p>
+        </details>
+        <details>
+          <summary>阅读时情绪受到影响怎么办？</summary>
+          <p>可以控制单次阅读时长，穿插轻松向内容，或暂时放下作品。虚构叙事带来的情绪波动是正常现象，但不必让它长期影响日常状态。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>虐带美女·题材导航</h4>
+        <p>围绕情感冲突与女性角色塑造的题材梳理页面，提供类型划分、阅读顺序与选作品方法，帮助读者更高效地找到符合自己口味的剧情向作品。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#intro">题材释义</a></li>
+          <li><a href="#types">类型分支</a></li>
+          <li><a href="#ranking">人气看点</a></li>
+          <li><a href="#guide">阅读指南</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读提醒</h4>
+        <ul>
+          <li><a href="#notes">情绪与节奏</a></li>
+          <li><a href="#notes">内容判断</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>本页为题材信息整理与阅读导航，内容以帮助读者理解类型与选择方向为目的。</span>
+      <span>请合理安排阅读时间</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('.main-nav a[href^="#"]');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  }
+})();
+</script>
+
+</body>
+  </html>
